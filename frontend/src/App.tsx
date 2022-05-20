@@ -3,14 +3,20 @@ import logo from './logo.svg';
 import './App.css';
 import Title from './components/Title';
 import SideMenu from './components/SideMenu';
-import ListRecipeComponent from './components/ListRecipeComponent';
+import SmallRecipeComponentCss from './components/SmallRecipeComponentCss';
+import styling from './styling.module.css'
+// import genericCssStyling from './modulesCss/genericCssStyling';
 
 const App = () => (
 
   <div className="App">
     <Title />
     <SideMenu />
-    <ListRecipeComponent />
+    <div className={styling.smallRecipeContainer}>
+      <SmallRecipeComponentCss />
+      <SmallRecipeComponentCss />
+      <SmallRecipeComponentCss />
+    </div>
   </div>
 
 )

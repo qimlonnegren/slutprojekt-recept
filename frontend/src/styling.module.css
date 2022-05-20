@@ -1,0 +1,63 @@
+/* Title */
+
+.TitleCss {
+    color: rgb(255, 161, 210);
+    background-color: rgb(48, 255, 248);
+    height: 5rem;
+    padding: 2.4rem 2.4rem 2.4rem 2.4rem;
+    font-size: large;
+    width: 100%;
+}
+
+.H1Css {
+    border-radius: 50%;
+    background-color: yellow;
+    width: 20%;
+    height: 4rem;
+    padding-top: 1rem;
+    margin: auto;
+}
+
+
+/* Side Menu */
+
+.parentSideMenuCss {
+    display: flex;
+    justify-content: flex-start;
+    width: 20%;
+    margin: 0;
+}
+
+.sideMenuCss {
+    color: rgb(255, 161, 210);
+    background-color: rgb(49, 166, 162);
+    width: 10rem;
+    padding: 2.4rem 2.4rem 30rem 2.4rem;
+    font-size: xx-large;
+    margin: 0;
+    height: 100%;
+}
+
+
+/* Small Recipes */
+
+.smallRecipeContainer {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.SmallRecipeComponentCss {
+    color: rgb(255, 161, 210);
+    background-color: rgb(27, 109, 106);
+    height: 10rem;
+    width: 100rem;
+    padding: 2.4rem;
+    font-size: large;
+    margin: 2rem;
+}
+
+
+/*  */
