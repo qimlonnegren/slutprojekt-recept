@@ -1,9 +1,14 @@
 import express, { Request, Response, json} from 'express';
 import recipeModel from './models/recipe'
 import mongoose from 'mongoose'
+// import cors from 'cors'
 
+var cors = require('cors')
 const app = express();
+
 app.use(json());
+app.use(cors());
+
 
 const port = 4000;
 
