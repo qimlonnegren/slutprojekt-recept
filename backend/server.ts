@@ -6,8 +6,6 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-console.log(typeof process.env.MONGO_DB_CONNECTION_STRING);
-
 var cors = require('cors');
 const app = express();
 
