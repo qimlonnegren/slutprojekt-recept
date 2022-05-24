@@ -6,7 +6,7 @@ const SideMenu = () => {
     const [Categories, setCategories] = useState<Array<string>>([]);
 
     useEffect(() => {
-        fetch("http://localhost:4000/categories")
+        fetch("REACT_APP_API_BASE_URL/categories")
             .then(data => data.json())
             .then(Categories => setCategories(Categories))
 

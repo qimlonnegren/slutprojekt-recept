@@ -31,7 +31,7 @@ export interface IRecipe {
 const Recipes = () => {
     const [Recipes, setRecipes] = useState<Array<IRecipe> | undefined>();
     useEffect(() => {
-        fetch("process.env.REACT_APP_API_BASE_URL/recipes")
+        fetch(`${process.env.REACT_APP_API_BASE_URL}/recipes`)
             .then(data => data.json())
             .then(Recipes => setRecipes(Recipes))
             
