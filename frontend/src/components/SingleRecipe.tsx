@@ -4,30 +4,30 @@ import styling from '../styling.module.css'
 const SingleRecipe = () => (
     <article className={styling.singleRecipe}>
         <img src="logo192.png" alt="logo" className={styling.singleRecipeImage} />
-        <section className={styling.RecipeSection}>
-            <h1 className={styling.sh1}>title</h1>
+        <section className={styling.SingleRecipeSection}>
+            <h1 className={styling.sh1}>Title</h1>
+            <h3 className={styling.sh3}>Description</h3>
         </section>
-        <section>
-            <h3 className={styling.sh3}>ratings*</h3>
-            <h3 className={styling.sh3}>* ingredienser</h3>
-            <h3 className={styling.sh3}>* minuter</h3>
+        <section className={styling.SingleRecipeSectionRow}> 
+            <h3 className={styling.sh3}>* Ratings</h3>
+            <h3 className={styling.sh3}>* Ingredienser</h3>
+            <h3 className={styling.sh3}>* Minuter</h3>
         </section>
-        <h3 className={styling.sh3}>description</h3>
-        <section className={styling.RecipeBottom}>
-            <h4 className={styling.sh4}>ingredienser</h4>
-            <h4 className={styling.sh4}>ingredienser-lista</h4>
+        <section className={styling.SingleRecipeSectionColumn}>
+            <h4 className={styling.sh4}>Ingredienser</h4>
+            <h4 className={styling.sh4}>Ingredienser-lista</h4>
         </section>
-        <section>
-         <h4>Instruktioner</h4>
-         <h4>instruktions-lista</h4>
+        <section className={styling.SingleRecipeSectionColumn}>
+            <h4 className={styling.sh4}>Instruktioner</h4>
+            <h4 className={styling.sh4}>instruktions-lista</h4>
         </section>
-        <section>
-            <h4>Betygssätt receptet!</h4>
-            <h4>*****</h4>
+        <section className={styling.SingleRecipeSectionColumn}>
+            <h4 className={styling.sh4}>Betygssätt receptet!</h4>
+            <h4 className={styling.sh4}>*****</h4>
         </section>
-        <section>
-            <h4>Kommentarer!</h4>
-            <h4>Kommentar-lista</h4>
+        <section className={styling.SingleRecipeSectionColumn}>
+            <h4 className={styling.sh4}>Kommentarer!</h4>
+            <h4 className={styling.sh4}>Kommentar-lista</h4>
         </section>
     </article>
 

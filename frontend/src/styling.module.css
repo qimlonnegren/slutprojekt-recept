@@ -68,7 +68,7 @@
     flex-direction: column;
 }
 
-.RecipeSection {
+.SingleRecipeSection {
     width: 23.9rem;
     height: 2.5rem;
     display: flex;
@@ -139,8 +139,9 @@
 
 .sh1 {
     font-size: x-large;
-    width: 60%;
-    margin: 0;
+    width: 40%;
+    height: 2.5rem;
+    margin: 0 0 1rem 0;
 }
 
 .sh2 {
@@ -151,8 +152,8 @@
 
 .sh3 {
     font-size: large;
-    width: 80%;
-    height: 20%;
+    width: 40%;
+    height: 2.5rem;
     margin: 1rem 0 0 0;
 }
 
@@ -160,4 +161,24 @@
     font-size: large;
     width: 50%;
     margin: 1rem 0 0 0;
+}
+
+.SingleRecipeSection {
+    width: 50%;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.SingleRecipeSectionRow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.SingleRecipeSectionColumn {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
 }

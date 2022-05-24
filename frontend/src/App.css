@@ -1,6 +1,8 @@
 body {
     background-color: #ffdcb8;
     width: 1000px;
+    margin: auto;
+    background-color: white;
 }
 
 .App {
@@ -9,6 +11,7 @@ body {
     flex-wrap: wrap;
     max-width: 100%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: lightgoldenrodyellow;
 }
 
 .App-logo {
