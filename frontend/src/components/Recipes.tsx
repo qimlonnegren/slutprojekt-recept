@@ -37,7 +37,6 @@ const Recipes = () => {
             
     }, [])
     return <>{Recipes?.map(recipe => <SmallRecipeComponent recipe={recipe}/>)}</>
-
 }
 
 export default Recipes;

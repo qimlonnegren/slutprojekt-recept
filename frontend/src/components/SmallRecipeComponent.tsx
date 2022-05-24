@@ -9,7 +9,7 @@ interface props {
 const SmallRecipeComponent = ({ recipe }: props) =>
 
     <article className={styling.PreviewRecipe}>
-        <img src="logo192.png" alt="logo" className={styling.recipeImage} />
+        <img src="logo192.png" alt="Recipe image" className={styling.recipeImage} />
         <section className={styling.RecipeSection}>
             <h1 className={styling.h1}>{recipe.title}</h1>
             <h2 className={styling.h2}>{recipe.ratings.length}stars*({recipe.ratings.length})</h2>

@@ -4,6 +4,8 @@ import Title from './components/Title';
 import SideMenu from './components/SideMenu';
 import styling from './styling.module.css'
 import Recipes from './components/Recipes'
+import SingleRecipe from './components/SingleRecipe'
+
 
 const App = () => (
 
@@ -11,6 +13,7 @@ const App = () => (
     <Title />
     <SideMenu />
     <div className={styling.smallRecipeContainer}>
+      <SingleRecipe />
       <Recipes />
     </div>
   </div>

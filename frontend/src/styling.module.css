@@ -24,23 +24,27 @@
 
 .parentSideMenuCss {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     width: 20%;
+    padding: 1rem;
     margin: 0 1rem 0 0;
+    background-color: rgb(49, 166, 162);
+    color: rgb(255, 161, 210);
+    text-align: left;
 }
 
 .sideMenuCss {
-    color: rgb(255, 161, 210);
-    background-color: rgb(49, 166, 162);
-    width: 10rem;
-    padding: 2.4rem 2.4rem 30rem 2.4rem;
+    width: 5rem;
+    padding-left: 1rem;
     font-size: xx-large;
-    margin: 0;
-    height: 100%;
+    /* margin: 0; */
+    /* height: 100%; */
 }
 
 
-/* Small Recipes */
+/* Preview Recipes */
 
 .smallRecipeContainer {
     display: flex;
@@ -76,6 +80,13 @@
     display: flex;
 }
 
+.recipeImage {
+    margin-right: 1rem;
+    height: 100%;
+    width: auto;
+    border: 1px solid #929292;
+}
+
 .h1 {
     font-size: x-large;
     width: 60%;
@@ -95,13 +106,6 @@
     margin: 1rem 0 0 0;
 }
 
-.recipeImage {
-    margin-right: 1rem;
-    height: 100%;
-    width: auto;
-    border: 1px solid #929292;
-}
-
 .h4 {
     font-size: large;
     width: 50%;
@@ -109,4 +113,51 @@
 }
 
 
-/*  */
+/* Single recipe */
+
+.singleRecipe {
+    color: rgb(255, 161, 210);
+    background-color: rgb(27, 109, 106);
+    /* height: 25rem; */
+    height: auto;
+    width: 100rem;
+    padding: 1.4rem;
+    font-size: large;
+    margin: 2rem;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.singleRecipeImage {
+    margin-right: 1rem;
+    height: 200px;
+    width: 200px;
+    border: 1px solid #929292;
+}
+
+.sh1 {
+    font-size: x-large;
+    width: 60%;
+    margin: 0;
+}
+
+.sh2 {
+    font-size: x-large;
+    width: 50%;
+    margin: 0;
+}
+
+.sh3 {
+    font-size: large;
+    width: 80%;
+    height: 20%;
+    margin: 1rem 0 0 0;
+}
+
+.sh4 {
+    font-size: large;
+    width: 50%;
+    margin: 1rem 0 0 0;
+}
