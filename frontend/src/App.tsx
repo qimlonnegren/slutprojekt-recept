@@ -15,6 +15,8 @@ const App = () => (
     <div className={styling.smallRecipeContainer}>
       <SingleRecipe />
       <Recipes />
+      <Recipes />
+      <Recipes />
     </div>
   </div>
 
