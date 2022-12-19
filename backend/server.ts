@@ -49,7 +49,7 @@ app.get('/categories', async (req, res) => {
 
 //   Hämtar alla recept för en viss kategori
 app.get('/categories/:categoryName/recipes', async (req, res) => {
-    console.log("hej alla recept för en kategori och searched")
+    console.log("hej alla recept för en specifik kategori och searched")
     let filter: any = { category: req.params.categoryName };
     if (req.query.search) {
         filter.title = req.query.search;

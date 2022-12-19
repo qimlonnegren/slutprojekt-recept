@@ -48,13 +48,13 @@
 
 .smallRecipeContainer {
     display: flex;
-    width: 70%;
+    width: 75%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
-.PreviewRecipe {
+.recipeArticle {
     color: rgb(255, 161, 210);
     background-color: rgb(27, 109, 106);
     height: 12rem;
@@ -66,6 +66,12 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+.recipeDiv {
+    /* display: block; */
+    width: 100%;
 }
 
 .SingleRecipeSection {
@@ -82,8 +88,9 @@
 
 .recipeImage {
     margin-right: 1rem;
-    height: 100%;
-    width: auto;
+    height: 11rem;
+    width: 11rem;
+    /* width: auto; */
     border: 1px solid #929292;
 }
 
@@ -110,6 +117,11 @@
     font-size: large;
     width: 50%;
     margin: 1rem 0 0 0;
+}
+
+.p {
+    display: inline;
+    margin-left: 5rem;
 }
 
 
