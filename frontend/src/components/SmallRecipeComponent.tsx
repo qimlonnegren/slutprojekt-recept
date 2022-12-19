@@ -6,13 +6,35 @@ interface props {
     recipe: IRecipe
 }
 
-const SmallRecipeComponent = ({ recipe }: props) =>
+const SmallRecipeComponent = ({ recipe }: props) => {
+    const average = (ratings: Array<any>) => {
+        if (ratings.length == 0) {
+            return 0;
+        }
 
-    <article className={styling.recipeArticle}>
+        let total = 0;
+
+        ratings.forEach((r) => {
+            total += r;
+        })
+
+        return Math.ceil(total / ratings.length);
+    }
+
+    const stars = (ratings: Array<any>) => {
+        const s = [];
+        for(let i=0; i < average(recipe.ratings); i++) {
+            s.push(<i className="fa-solid fa-star"></i>);
+        }
+        return s
+    }
+
+
+    return <article className={styling.recipeArticle}>
         <img src="logo192.png" alt="Recipe" className={styling.recipeImage} />
         <div className={styling.recipeDiv}>
             <h1 className={styling.h1}>{recipe.title}</h1>
-            <h2 className={styling.h2}>{recipe.ratings.length}stars*({recipe.ratings.length})</h2>
+            <h2 className={styling.h2}>{stars(recipe.ratings)}</h2>
         </div>
 
         <div className={styling.recipeDiv}>
@@ -24,6 +46,7 @@ const SmallRecipeComponent = ({ recipe }: props) =>
             <p className={styling.p}>{recipe.timeInMins.toString()} minuter</p>
         </div>
     </article>
+};
 
 export default SmallRecipeComponent;
 
