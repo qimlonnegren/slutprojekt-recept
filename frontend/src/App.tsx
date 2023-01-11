@@ -5,7 +5,7 @@ import SideMenu from './components/SideMenu'
 import Recipes from './components/Recipes'
 import SingleRecipe from './components/SingleRecipe'
 // import { Outlet, Link } from "react-router-dom"
-import { Outlet } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 
 
 const App = () => (
@@ -13,23 +13,22 @@ const App = () => (
   <div className="App">
     <Title />
     <SideMenu />
-    {/* <Link to="/sideMenu">Kategorier</Link> */}
-  
-    {/* <Link to="/recipes">Flera Recept</Link>
-    <Link to="/:singleRecipe">1 Recept</Link>
- */}
 
     <div className={styling.smallRecipeContainer}>
-      <Outlet />
-      <Recipes />
-      <Recipes />
-      <Recipes />
+      <Routes>
+        <Route path="/" element={<Recipes />} />
+        <Route path="/recipe/:recipeId" element={<SingleRecipe />} />
+        <Route path="/category/:category" element={<Recipes />} />
+        
+        <Route path='*' element={
+            <div>
+              <p>Nothing to see here!</p>
+            </div>
+          } />
+        {/* </Route> */}
+      </Routes>
     </div>
   </div>
-
 )
-
-
-
 
 export default App;
