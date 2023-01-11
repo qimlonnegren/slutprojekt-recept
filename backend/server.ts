@@ -43,7 +43,17 @@ app.get('/recipes/:recipeId', async (req, res) => {
 //  Hämtar alla kategorier
 app.get('/categories', async (req, res) => {
     console.log("hej alla kategorier")
-    const categories = await recipeModel.find({}).distinct('category').exec();
+
+    const categories = await recipeModel.aggregate([
+        { 
+            $group: {
+                _id: "$category",
+                count: { $sum: 1}
+            }
+        }
+    ]).exec()
+
+    console.log(categories);
     res.status(200).json(categories);
 })
 
