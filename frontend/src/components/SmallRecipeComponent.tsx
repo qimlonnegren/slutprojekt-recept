@@ -1,5 +1,7 @@
 import styling from '../styling.module.css'
+import { Link } from "react-router-dom"
 import { IRecipe } from './Recipes'
+
 
 
 interface props {
@@ -8,7 +10,7 @@ interface props {
 
 const SmallRecipeComponent = ({ recipe }: props) => {
     const average = (ratings: Array<any>) => {
-        if (ratings.length == 0) {
+        if (ratings.length === 0) {
             return 0;
         }
 
@@ -31,9 +33,9 @@ const SmallRecipeComponent = ({ recipe }: props) => {
 
 
     return <article className={styling.recipeArticle}>
-        <img src="logo192.png" alt="Recipe" className={styling.recipeImage} />
+         <img src={recipe?.imageUrl} alt={recipe?.title} className={styling.singleRecipeImage} />
         <div className={styling.recipeDiv}>
-            <h1 className={styling.h1}>{recipe.title}</h1>
+            <h1 className={styling.h1}><Link to={"/recipe/" + recipe._id}>{recipe.title}</Link></h1>
             <h2 className={styling.h2}>{stars(recipe.ratings)}</h2>
         </div>
 
