@@ -22,7 +22,7 @@ app.get('/', (req: Request, res: Response) => res.send('Hello world!'));
 
 // Hämtar information för alla recept
 app.get('/recipes', async (req, res) => {
-    console.log("hej recept")
+    // console.log("hej recept")
     let filter: any = {};
     if (req.query.search) {
         filter.title = req.query.search;
@@ -34,7 +34,7 @@ app.get('/recipes', async (req, res) => {
 
 //  Hämtar all information för ett recept med valt id
 app.get('/recipes/:recipeId', async (req, res) => {
-    console.log("hej enstaka recept")
+    // console.log("hej enstaka recept")
     const recipe = await recipeModel.findById(req.params.recipeId);
     // recipeModel.find();
     res.status(200).json(recipe);
@@ -42,7 +42,7 @@ app.get('/recipes/:recipeId', async (req, res) => {
 
 //  Hämtar alla kategorier
 app.get('/categories', async (req, res) => {
-    console.log("hej alla kategorier")
+    // console.log("hej alla kategorier")
 
     const categories = await recipeModel.aggregate([
         { 
@@ -53,13 +53,13 @@ app.get('/categories', async (req, res) => {
         }
     ]).exec()
 
-    console.log(categories);
+    // console.log(categories);
     res.status(200).json(categories);
 })
 
 //   Hämtar alla recept för en viss kategori
 app.get('/categories/:categoryName/recipes', async (req, res) => {
-    console.log("hej alla recept för en specifik kategori och searched")
+    // console.log("hej alla recept för en specifik kategori och searched")
     let filter: any = { category: req.params.categoryName };
     if (req.query.search) {
         filter.title = req.query.search;
@@ -72,7 +72,7 @@ app.get('/categories/:categoryName/recipes', async (req, res) => {
 // Lägger till en ny rating för ett recept
 app.post('/recipes/:recipeId/ratings', async (req, res) => {
     const recipe = await recipeModel.findById(req.params.recipeId).exec();
-    console.log(recipe)
+    // console.log(recipe)
     recipe?.ratings.push(req.body.rating)
     await recipe?.save()
     res.status(200).json(recipe);
