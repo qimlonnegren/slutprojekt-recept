@@ -11,14 +11,26 @@
 
 .H1Css {
     border-radius: 50%;
-    background-color: yellow;
+    background-color: rgb(255, 255, 125);
     width: 20%;
     min-width: 20rem;
     height: 4rem;
     padding-top: 1rem;
     margin: auto;
+    text-decoration: none;
 }
 
+.H1Css a {
+    /* margin: auto; */
+    text-decoration: none;
+    color: hotpink;
+}
+
+.H1Css a:hover {
+    /* margin: auto; */
+    text-decoration: none;
+    color: pink;
+}
 
 /* Side Menu */
 
@@ -31,16 +43,21 @@
     padding: 1rem;
     margin: 0 1rem 0 0;
     background-color: rgb(49, 166, 162);
-    color: rgb(255, 161, 210);
+    color: rgb(255, 255, 106);
     text-align: left;
+}
+
+.parentSideMenuCss ul li a {
+    color: rgb(255, 255, 106);
+    font-size: large;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 .sideMenuCss {
     width: 5rem;
     padding-left: 1rem;
     font-size: xx-large;
-    /* margin: 0; */
-    /* height: 100%; */
 }
 
 
@@ -54,10 +71,14 @@
     flex-wrap: wrap;
 }
 
+.inputField {
+    margin: 2rem 0 0 2rem;
+}
+
 .recipeArticle {
     color: rgb(255, 161, 210);
     background-color: rgb(27, 109, 106);
-    height: 12rem;
+    height: 12.5rem;
     width: 100%;
     padding: 1.4rem;
     font-size: large;
@@ -67,6 +88,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 10px;
 }
 
 .recipeDiv {
@@ -94,10 +116,21 @@
     border: 1px solid #929292;
 }
 
+.recipeDiv h1 a {
+    color: rgb(255, 94, 177);
+    text-decoration: none;
+}
+
+.recipeDiv h1 a:hover {
+    color: rgb(239, 47, 146);
+    text-decoration: none;
+}
+
+
 .h1 {
-    font-size: x-large;
+    font-size: xx-large;
     width: 60%;
-    margin: 0;
+    margin: 0 0 0.3rem 0;
 }
 
 .h2 {
@@ -128,8 +161,8 @@
 /* Single recipe */
 
 .singleRecipe {
-    color: rgb(255, 161, 210);
-    background-color: rgb(27, 109, 106);
+    color: rgb(255, 143, 193);
+    background-color: rgba(14, 128, 124, 0.978);
     /* height: 25rem; */
     height: auto;
     width: 100rem;
@@ -140,6 +173,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    border-radius: 10px;
 }
 
 .singleRecipeImage {
@@ -147,11 +181,12 @@
     height: 200px;
     width: 200px;
     border: 1px solid #929292;
+    border-radius: 10px;
 }
 
 .sh1 {
     font-size: x-large;
-    width: 40%;
+    width: 100%;
     height: 2.5rem;
     margin: 0 0 1rem 0;
 }
@@ -164,7 +199,7 @@
 
 .sh3 {
     font-size: large;
-    width: 40%;
+    width: 100%;
     height: 2.5rem;
     margin: 1rem 0 0 0;
 }
@@ -172,7 +207,7 @@
 .sh4 {
     font-size: large;
     width: 50%;
-    margin: 1rem 0 0 0;
+    margin: 1rem 0 0 0.5rem;
 }
 
 .SingleRecipeSection {
@@ -193,4 +228,8 @@
     width: 50%;
     display: flex;
     flex-direction: column;
+}
+
+.SingleRecipeSectionColumn ul {
+    width: 17rem;
 }
