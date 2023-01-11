@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
-// import ObjectId from 'mongoose'
 import SmallRecipeComponent from './SmallRecipeComponent'
-
+import { useParams } from 'react-router-dom';
 
 export interface ingredientType {
     ingredient: String;
@@ -16,27 +15,42 @@ export interface commentType {
 }
 
 export interface IRecipe {
-        // id: String;
-        title: String;
+        _id: String;
+        title: string;
         description: String;
-        imageUrl: String;
+        imageUrl: string;
         timeInMins: Number;
         ratings: Array<Number>;
         category: Array<String>;
         ingredients: Array<ingredientType>;
         instructions: Array<String>;
         comments: Array<commentType>;
-    }
+}
 
 const Recipes = () => {
+    let { category } = useParams();
     const [Recipes, setRecipes] = useState<Array<IRecipe> | undefined>();
+    const [search, setSearch] = useState("");
+
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_BASE_URL}/recipes`)
-            .then(data => data.json())
-            .then(Recipes => setRecipes(Recipes))
+        if (category) {
+            fetch(`${process.env.REACT_APP_API_BASE_URL}/categories/${category}/recipes?search=${search}`)
+                .then(data => data.json())
+                .then(Recipes => setRecipes(Recipes))
+        } else {
+            fetch(`${process.env.REACT_APP_API_BASE_URL}/recipes?search=${search}`)
+                .then(data => data.json())
+                .then(Recipes => setRecipes(Recipes))
+        }
             
-    }, [])
-    return <>{Recipes?.map(recipe => <SmallRecipeComponent recipe={recipe}/>)}</>
+    },  [search, category])
+
+    return <>
+        <input type="text" placeholder={ category || "sök"} value={ search } onChange={(e) => setSearch(e.target.value)}/>
+        {Recipes?.map(recipe => <SmallRecipeComponent key={recipe._id.toString()} recipe={recipe}/>)}
+        </>
 }
 
 export default Recipes;
+
+
