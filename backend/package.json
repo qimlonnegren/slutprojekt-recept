@@ -6,6 +6,7 @@
     "scripts": {
         "start-dev": "nodemon --watch *.ts --exec ts-node server.ts",
         "start": "ts-node server.ts",
+        "build": "npx tsc --build",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
