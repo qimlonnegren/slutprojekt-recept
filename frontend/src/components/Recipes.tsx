@@ -46,7 +46,7 @@ const Recipes = () => {
     },  [search, category])
 
     return <>
-        <input type="text" placeholder={ category || "sök"} value={ search } onChange={(e) => setSearch(e.target.value)}/>
+        <input type="text" placeholder={ category || "Sök"} value={ search } onChange={(e) => setSearch(e.target.value)}/>
         {Recipes?.map(recipe => <SmallRecipeComponent key={recipe._id.toString()} recipe={recipe}/>)}
         </>
 }
